@@ -36,21 +36,64 @@
 
         <article>
             <section>
-                <h2>Primera Seccion</h2>
-                <p>Info de la primera seccion</p>
+                <h2>Contáctanos</h2>
+                <p>Favor de llenar los datos solicitados, para pedir información</p>
                 
 
             </section>
 
-            <section>
-                <h2>Segunda Seccion</h2>
-                <p>Info de la segunda seccion</p>
-            </section>
+            <form action="#" method="post">
 
-            <section>
-                <h2>Tercera Seccion</h2>
-                <p>Info de la tercera seccion</p>
-            </section>
+                <!--  Informacion Personal -->
+                <fieldset>
+                <legend>Datos personales</legend>
+
+                <p>
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre"
+                        required minlength="3" maxlength="60"
+                        placeholder="Juan Rafael Mora Porras">
+                </p>
+
+                <p>
+                    <label for="cedula">Cédula *</label>
+                    <input type="text" id="cedula" name="cedula"
+                        required pattern="[0-9]{9}"
+                        title="Nueve dígitos, sin guiones ni espacios"
+                        placeholder="112345678">
+                </p>
+
+                <p>
+                    <label for="correo">E-mail *</label>
+                    <input type="email" id="correo" name="correo"
+                        required
+                        placeholder="persona@ejemplo.com">
+                    <small>Se usará para confirmar la matrícula.</small>
+                </p>
+
+                <p>
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono"
+                        required pattern="[0-9]{8}"
+                        title="Ocho dígitos, sin espacios ni guiones"
+                        placeholder="88887777">
+                </p>
+
+                <p>
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios"
+                            rows="4" maxlength="300"
+                            placeholder="Indique qué servicios o información desea conocer"></textarea>
+                    <small>Máximo 300 caracteres.</small>
+                </p>
+                
+                </fieldset>         
+                    
+                <p>
+                    <button type="submit">Enviar Solicitud</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+            </form>
 
         </article>
     </main>
