@@ -18,6 +18,22 @@ body {                                    /*Datos basicos para el body*/
     line-height: 1.6;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 #cabecera {                            /* Encabezado */
     background: var(--principal);
     color: white;
@@ -67,9 +83,83 @@ body {                                    /*Datos basicos para el body*/
     font-size: 3rem;    
 }                 /*Pseudoelemento*/
 
+#servicios {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+
+
+}
+/*  Voy a comentar esto
+.rejilla-servicios {
+    width: 300px;
+    background: white;
+    padding: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    margin: 1rem;
+    box-shadow: var(--sombra);
+    transition: .3s;
+}   
+
+.rejilla-servicios {
+    transform: translateY(-10px);
+}      hasta aca */
+
+#servicios {
+    text-align: left;
+}
+
+.rejilla-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.rejilla-servicios article {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}             /* Tarjeta Grid*/
 
 
 
+/* Submenu de la página catálogo */
+
+.indice {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Aqui Inicia la Tabla*/
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}   /* Tabla*/
+
+th {
+    background-color: var(--principal);
+    color: white;
+    padding: 1rem;
+}     /* Encabezado Tabla*/
+
+td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}     /*Celdas*/
+
+tbody tr:nth-child(even) {
+    background: #eee;
+}   /* Filas Zebra*/
 
 
 #pie {                                  /* Pie de Página */
