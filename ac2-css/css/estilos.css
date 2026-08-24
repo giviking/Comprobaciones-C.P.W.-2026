@@ -146,7 +146,7 @@ table {
     border-collapse: collapse;
 }   /* Tabla*/
 
-th {
+thead, tfoot {
     background-color: var(--principal);
     color: white;
     padding: 1rem;
