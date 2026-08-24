@@ -45,7 +45,12 @@ p {
 
 .lema {
     font-family: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: large;
 }
+
+
 
 .menu-principal {
     list-style: none;
