@@ -4,15 +4,84 @@
     box-sizing: border-box;
 }   /* RESET */
 
-:root {
+:root {                                         /* Variables */          
     --principal:#1f4e79;
+    --secundario:#f4f4f4;
+    --acento: #c55a11;
+    --texto: #333;
+    --sombra: 0.5px 15px rgba(0 ,0 ,0, .15);
 }
 
+body {                                    /*Datos basicos para el body*/
+    background-color: var(--secundario);
+    color: var(--texto);
+    line-height: 1.6;
+}
 
-#pie {
+#cabecera {                            /* Encabezado */
     background: var(--principal);
     color: white;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.lema {
+    font-family: italic;
+}
+
+.menu-principal {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: white;
+}
+
+.menu-principal a {               /* Menu Principal Enalces*/
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .8rem 1.2rem;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.menu-principal a:hover {         /*Pseudo Clase hover*/
+    background: var(--acento);
+}
+
+.menu-principal a:focus {          /* Pseudo Clase hover*/
+    outline: 3px solid yellow;
+}
+
+.hero {
     text-align: center;
+    padding: 3rem;
+}    /*Texto Centrado*/
+
+.hero h2::first-letter {
+    color: var(--acento);
+    font-size: 3rem;    
+}                 /*Pseudoelemento*/
+
+
+
+
+
+
+#pie {                                  /* Pie de Página */
+    background: var(--principal);
+    color: white;
+    text-align: left;
     padding: 1.5rem;
     margin-top: 2rem;
+}
+
+.creditos {
+    background: var(--principal);
+    text-align: center;
+    color: white;
 }
