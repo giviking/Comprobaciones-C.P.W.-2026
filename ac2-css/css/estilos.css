@@ -194,7 +194,27 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-family: inherit;
-}                      /* Campos del Formulario */
+}                  /* Campos del Formulario */
+
+/* Los Botones */
+button {
+    background: var(--acento);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: .3s;
+}  
+
+button:hover {
+    transform: scale(1.05);    
+}        /* Transform Scale*/
+
+
+
+
 
 #pie {                                  /* Pie de Página */
     background: var(--principal);
