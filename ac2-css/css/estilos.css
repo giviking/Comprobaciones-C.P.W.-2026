@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }   /* RESET */
+
+:root {
+    --principal:#1f4e79;
+}
+
+
+#pie {
+    background: var(--principal);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
