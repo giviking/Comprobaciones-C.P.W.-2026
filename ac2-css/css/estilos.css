@@ -3,8 +3,13 @@
     --suave: #6b6259;
     --marca: #5b3a29;
     --acento: #a6572f;
-
-
+    --acento-osc: #7f4224;
+    --papel: #f8f6f3;
+    --papel-alt: f1eae0;
+    --linea: #ddd2c4;
+    --blanco: #ffffff;
+    --error: #823a2f;
+    --exito: #2e7d32;
 
     /*tipografias*/
     --fuente-titulo: Georgia. 'Times New Roman', serif;
@@ -30,5 +35,45 @@
 }
 
 html {
-    font-family: 62.5%;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    color: var(--tinta);
+    background-color: var(--papel);
+}
+
+/*Selectores de etiqueta Estilos para títulos*/
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    line-height: 1.2;
+    color: var(--marca);
+}
+h1 {font-size: 4.4rem;}
+h2 {font-size: 3.0rem;}
+h3 {font-size: 2.0;}
+
+p {margin-bottom: var(--esp-sm);}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*CONTENEDORES*/
+
+#contenido {
+    max-width: var(--ancho-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--esp-lg) var(--esp-md);
 }
