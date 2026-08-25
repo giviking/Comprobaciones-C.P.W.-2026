@@ -23,8 +23,11 @@
     --esp-xl: 7.2rem;
 
     --radio: 0.6rem;
-
-
+    --sombra-1: 0 0.2rem 0.6rem rgba(0,0,0,.06);
+    --sombra-2: 0 0.4rem 1.2rem rgba(0,0,0,.10);
+    --sombra-3: 0 0.8rem 2.0rem rgba(0,0,0,.16);
+    --transicion: 0.25s ease;
+    --ancho-max: 114rem;
 }
 
 /*Reset y base*/   /* Ver porque aqui cree la nueva rama*/
@@ -76,4 +79,22 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding: var(--esp-lg) var(--esp-md);
+}
+#portada,
+#servicios,
+#historia,
+#existencias,
+#categorias,
+#pedido {
+    margin-bottom: var(--esp-xl);
+}
+#portada > h2,
+#servicios > h2,
+#existencias > h2,
+#servicios > h2,
+#categorias > h2,
+#pedido > h2 {
+    margin-bottom: var(--esp-md);
+    padding-bottom: var(--esp-xs);
+    border-bottom: 0.2rem solid var(--linea);
 }
