@@ -1,236 +1,34 @@
+:root {
+    --tinta: #1f1b16;
+    --suave: #6b6259;
+    --marca: #5b3a29;
+    --acento: #a6572f;
+
+
+
+    /*tipografias*/
+    --fuente-titulo: Georgia. 'Times New Roman', serif;
+    --fuente-texto: 'Segoe UI', Arial, san-serif;
+
+    /*escalas y espacios*/
+    --esp-xs: 0.8rem;
+    --esp-sm: 1.6rem;
+    --esp-md: 2.4rem;
+    --esp-lg: 4.0rem;
+    --esp-xl: 7.2rem;
+
+    --radio: 0.6rem;
+
+
+}
+
+/*Reset y base*/   /* Ver porque aqui cree la nueva rama*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   /* RESET */
-
-:root {                                         /* Variables */          
-    --principal:#1f4e79;
-    --secundario:#f4f4f4;
-    --acento: #c55a11;
-    --texto: #333;
-    --sombra: 0.5px 15px rgba(0 ,0 ,0, .15);
 }
 
-body {                                    /*Datos basicos para el body*/
-    background-color: var(--secundario);
-    color: var(--texto);
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-p {
-    font-size: 1rem;
-}
-
-#cabecera {                            /* Encabezado */
-    background: var(--principal);
-    color: white;
-    padding: 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.lema {
-    font-family: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: large;
-}
-
-
-
-.menu-principal {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    color: white;
-}
-
-.menu-principal a {               /* Menu Principal Enalces*/
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: .8rem 1.2rem;
-    border-radius: 8px;
-    transition: .3s;
-}
-
-.menu-principal a:hover {         /*Pseudo Clase hover*/
-    background: var(--acento);
-}
-
-.menu-principal a:focus {          /* Pseudo Clase hover*/
-    outline: 3px solid yellow;
-}
-
-.hero {
-    text-align: center;
-    padding: 3rem;
-}    /*Texto Centrado*/
-
-.hero h2::first-letter {
-    color: var(--acento);
-    font-size: 3rem;    
-}                 /*Pseudoelemento*/
-
-#servicios {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-
-
-}
-/*  Voy a comentar esto
-.rejilla-servicios {
-    width: 300px;
-    background: white;
-    padding: 1.5rem;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    margin: 1rem;
-    box-shadow: var(--sombra);
-    transition: .3s;
-}   
-
-.rejilla-servicios {
-    transform: translateY(-10px);
-}      hasta aca */
-
-#servicios {
-    text-align: left;
-}
-
-.rejilla-servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-}
-
-.rejilla-servicios article {
-    background: white;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: var(--sombra);
-}             /* Tarjeta Grid*/
-
-
-
-/* Submenu de la página catálogo */
-
-.indice {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-/* Aqui Inicia la Tabla*/
-table {
-    width: 90%;
-    margin: 2rem auto;
-    border-collapse: collapse;
-}   /* Tabla*/
-
-thead, tfoot {
-    background-color: var(--principal);
-    color: white;
-    padding: 1rem;
-}     /* Encabezado Tabla*/
-
-td {
-    padding: 1rem;
-    border: 1px solid #ddd;
-}     /*Celdas*/
-
-tbody tr:nth-child(even) {
-    background: #eee;
-}   /* Filas Zebra*/
-
-tfoot {
-    background-color: rgb(94, 71, 176); 
-    color: white;
-    padding: 1rem;
-}     /* Encabezado Tabla*/
-
-
-/* Formularios */
-
-form {
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: var(--sombra);
-}
-
-label {
-    text-emphasis: var(--principal);
-    display: block;
-    margin-top: 1rem;
-}   
-
-input, textarea {
-    background-color: darksalmon;
-    width: 100%;
-    padding: 1rem;
-    margin-top: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: inherit;
-}                  /* Campos del Formulario */
-
-/* Los Botones */
-button {
-    background: var(--acento);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: .3s;
-}  
-
-button:hover {
-    transform: scale(1.05);    
-}        /* Transform Scale*/
-
-
-
-
-
-#pie {                                  /* Pie de Página */
-    background: var(--principal);
-    color: white;
-    text-align: left;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.creditos {
-    background: var(--principal);
-    text-align: center;
-    color: white;
+html {
+    font-family: 62.5%;
 }
