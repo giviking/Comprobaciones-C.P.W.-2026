@@ -203,3 +203,25 @@ img {
     flex-direction: column;
     transition: transform var(--transicion), box-shadow var(--transicion);
 }
+
+.tarjeta h3 {
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta p {
+    color: var(--suave);
+    flex-grow: 1;        /*Ordena la fila y absorver el espacio sobrante*/
+}
+.tarjeta-pie {
+    margin-bottom: 0;
+    padding-top: var(--esp-xs);
+    border-top: 0.1rem solid var(--linea);
+    font-weight: 700;    /*negrita*/
+    color: var(--marca);
+    font-size: 1.5rem;
+}
+
+.tarjeta:hover {                    /*movimiento de las tarjetas*/
+    transform: translateY(-0.5rem);
+    box-shadow: var(--sombra-3);
+}
