@@ -98,3 +98,21 @@ img {
     padding-bottom: var(--esp-xs);
     border-bottom: 0.2rem solid var(--linea);
 }
+
+#cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--esp-sm);
+    
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-sm) var(--esp-sm);
+    background-color: var(--blanco);
+    border-bottom: 0.1rem solid var(--linea);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
