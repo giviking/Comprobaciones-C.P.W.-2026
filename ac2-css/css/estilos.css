@@ -238,3 +238,16 @@ img {
     box-shadow: var(--sombra-1);
     position: relative;
 }
+
+/*Pseudoelemento*/
+.cita::before {
+    content: '\201c';   /*Aparezcan comillas en la parte de la citacion*/
+    position: absolute;
+    top: -0.5rem;
+    left: 1.2rem;
+    font-family: var(--fuente-titulo);
+    font-size: 7rem;
+    color: var(--acento);
+    opacity: 0.22;
+    line-height: 1;
+}
