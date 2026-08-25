@@ -154,7 +154,20 @@ img {
     outline-offset: 0.2rem;
 }
 
-.menu-principal .enlace-activo {
+.menu-principal .enlace-activo {    /*Essto para que quede activo el menu en donde estemos*/
     color: var(--acento);
     background-color: var(--papel-alt);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--marca), var(--acento-osc));
+    color: var(--blanco);
+    padding: var(--esp-xl) var(--esp-md);
+    border-radius: var(--radio);
+    text-align: center;
+
+    display: flex;            /*Acomoda uno al lado de otro*/
+    flex-direction: column;   /*Aqui lo tira hacia abajo*/
+    align-items: center;
+    gap: var(--esp-sm);
 }
