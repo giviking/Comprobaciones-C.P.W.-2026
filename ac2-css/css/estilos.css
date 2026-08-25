@@ -183,5 +183,14 @@ img {
     font-size: 1.8rem;
     margin-bottom: var(--esp-xs);
     opacity: 0.94;
+}
 
+.rejilla-servicios {
+    display: flex;
+    gap: var(--esp-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    flex: 1 1 28rem;   /*Con esto se hace un rsponsive sin Media Query*/
 }
