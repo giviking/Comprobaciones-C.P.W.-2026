@@ -296,14 +296,14 @@ img {
     transition: background-color var(--transicion), transform var(--transicion);
 }
 
-/*Primer estadp*/
+/*Primer estado*/
 .boton-principal {
-    border-color: var(--acento);
+    background-color: var(--acento);
     color: var(--blanco);
 }
 
 .boton-principal:hover {
-    border-color: var(--acento);
+    background-color: var(--acento-osc);
     transform: translateY(-0.2rem);
 }
 
