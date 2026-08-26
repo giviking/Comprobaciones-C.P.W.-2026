@@ -1,0 +1,387 @@
+:root {
+    --tinta: #1f1b16;
+    --suave: #6b6259;
+    --marca: #5b3a29;
+    --acento: #a6572f;
+    --acento-osc: #7f4224;
+    --papel: #f8f6f3;
+    --papel-alt: #f1eae0;
+    --linea: #ddd2c4;
+    --blanco: #ffffff;
+    --error: #823a2f;
+    --exito: #2e7d32;
+
+    /*tipografias*/
+    --fuente-titulo: Georgia. 'Times New Roman', serif;
+    --fuente-texto: 'Segoe UI', Arial, san-serif;
+
+    /*escalas y espacios*/
+    --esp-xs: 0.8rem;
+    --esp-sm: 1.6rem;
+    --esp-md: 2.4rem;
+    --esp-lg: 4.0rem;
+    --esp-xl: 7.2rem;
+
+    --radio: 0.6rem;
+    --sombra-1: 0 0.2rem 0.6rem rgba(0,0,0,.06);
+    --sombra-2: 0 0.4rem 1.2rem rgba(0,0,0,.10);
+    --sombra-3: 0 0.8rem 2.0rem rgba(0,0,0,.16);
+    --transicion: 0.25s ease;
+    --ancho-max: 114rem;
+}
+
+/*Reset y base*/   /* Ver porque aqui cree la nueva rama*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    color: var(--tinta);
+    background-color: var(--papel);
+}
+
+/*Selectores de etiqueta Estilos para títulos*/
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    line-height: 1.2;
+    color: var(--marca);
+}
+h1 {font-size: 4.4rem;}
+h2 {font-size: 3.0rem;}
+h3 {font-size: 2.0;}
+
+p {margin-bottom: var(--esp-sm);}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*CONTENEDORES*/
+
+#contenido {
+    max-width: var(--ancho-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--esp-lg) var(--esp-md);
+}
+#portada,
+#servicios,
+#historia,
+#existencias,
+#categorias,
+#pedido {
+    margin-bottom: var(--esp-xl);
+}
+#portada > h2,
+#servicios > h2,
+#existencias > h2,
+#servicios > h2,
+#categorias > h2,
+#pedido > h2 {
+    margin-bottom: var(--esp-md);
+    padding-bottom: var(--esp-xs);
+    border-bottom: 0.2rem solid var(--linea);
+}
+
+#cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--esp-sm);
+   
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-sm) var(--esp-sm);
+    background-color: var(--blanco);
+    border-bottom: 0.1rem solid var(--linea);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.marca h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0;
+}
+.lema {
+    font-size: 1.4rem;
+    color: var(--suave);
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/*Menu Principal*/
+.menu-principal ul {
+    display: flex;          /*Aqui se ponen el inicio y catalogo uno a la par del otro*/
+    gap: var(--esp-xs);
+    list-style: none;
+}
+.menu-principal a {
+    display: inline-block;  /*sin esto no se le puede aplicar el padding*/
+    padding: var(--esp-xs) var(--esp-sm);
+    color: var(--tinta);
+    font-weight: 600;
+    border-radius: var(--radio);
+    transition: background-color var(--transicion), color var(--transicion);
+}
+
+/*Pseudoclase*/
+.menu-principal a:hover {
+    background-color: var(--papel-alt);
+    color: var(--marca);
+}
+
+.menu-principal a:focus {
+    outline: 0.2rem solid var(--acento);
+    outline-offset: 0.2rem;
+}
+
+.menu-principal .enlace-activo {    /*Essto para que quede activo el menu en donde estemos*/
+    color: var(--acento);
+    background-color: var(--papel-alt);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--marca), var(--acento-osc));
+    color: var(--blanco);
+    padding: var(--esp-xl) var(--esp-md);
+    border-radius: var(--radio);
+    text-align: center;
+
+    display: flex;            /*Acomoda uno al lado de otro*/
+    flex-direction: column;   /*Aqui lo tira hacia abajo*/
+    align-items: center;
+    gap: var(--esp-sm);
+}
+
+.hero h2 {
+    color: var(--blanco);
+    font-size: 3.6rem;
+    margin-bottom: 0;
+}
+
+.hero-texto {
+    max-width: 60ch;
+    font-size: 1.8rem;
+    margin-bottom: var(--esp-xs);
+    opacity: 0.94;
+}
+
+.rejilla-servicios {
+    display: flex;
+    gap: var(--esp-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    flex: 1 1 28rem;   /*Con esto se hace un rsponsive sin Media Query*/
+    background-color: var(--blanco);
+    padding: var(--esp-md);
+    border: 0.1rem solid var(--linea);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta h3 {
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta p {
+    color: var(--suave);
+    flex-grow: 1;        /*Ordena la fila y absorver el espacio sobrante*/
+}
+.tarjeta-pie {
+    margin-bottom: 0;
+    padding-top: var(--esp-xs);
+    border-top: 0.1rem solid var(--linea);
+    font-weight: 700;    /*negrita*/
+    color: var(--marca);
+    font-size: 1.5rem;
+}
+
+.tarjeta:hover {                    /*movimiento de las tarjetas*/
+    transform: translateY(-0.5rem);
+    box-shadow: var(--sombra-3);
+}
+#historia p {
+    max-width: 70ch;
+}
+.cita {
+    max-width: 68rem;
+    margin: var(--esp-md), 0;
+    padding: var(--esp-md) var(--esp-lg);
+    background-color: var(--blanco);
+    border-left: 0.5rem solid var(--acento);
+    border-radius: 0 var(--radio) var(--radio) 0;
+    box-shadow: var(--sombra-1);
+    position: relative;
+}
+
+/*Pseudoelemento*/
+.cita::before {
+    content: '\201c';   /*Aparezcan comillas en la parte de la citacion*/
+    position: absolute;
+    top: -0.5rem;
+    left: 1.2rem;
+    font-family: var(--fuente-titulo);
+    font-size: 7rem;
+    color: var(--acento);
+    opacity: 0.22;
+    line-height: 1;
+}
+
+.cita p {
+    font-family: var(--fuente-titulo);
+    font-size: 2.0rem;
+    font-style: italic;
+    position: relative;
+}
+
+.cita-autoria {              /*La autora que aparece en la citacion*/
+    color: var(--suave);
+    font-size: 1.4rem;
+    text-align: right;
+    font-style: normal;
+}
+/*CONTENIDO SECUNDARIO- ASIDE*/
+#aviso, .panel-aviso {
+    background-color: var(--papel-alt);
+    border-left: 0.4rem solid var(--acento);
+    border-radius: 0 var(--radio) var(--radio) 0;
+    padding: var(--esp-md);
+    margin: var(--esp-lg) auto;
+    max-width: var(--ancho-max);
+    box-shadow: var(--sombra-1);
+}
+#aviso h2 {                          /*Aside*/
+    font-size: 2.2rem;
+    margin-bottom: var(--esp-xs);
+}
+
+#aviso p {
+    margin-bottom: 0;
+}
+
+/*BOTONES*/
+.boton {
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-md);
+    border-radius: var(--radio);
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+/*Primer estado*/
+.boton-principal {
+    background-color: var(--acento);
+    color: var(--blanco);
+}
+
+.boton-principal:hover {
+    background-color: var(--acento-osc);
+    transform: translateY(-0.2rem);
+}
+
+/*Segundo estado*/
+.boton-principal:active {
+    transform: translateY(0);
+}
+
+.boton-secundario {
+    background-color: var(--papel-alt);
+    color: var(--tinta);
+}
+
+.boton-secundario:hover {
+    background-color: var(--linea);
+}
+
+.boton:focus {
+    outline: 0.2rem solid var(--marca);
+    outline-offset: 0.2rem;
+}
+
+.volver {
+    text-align: center;
+    margin-top: var(--esp-lg);
+}
+
+.volver a {
+    font-size: 1.4rem;
+    color: var(--suave);
+    border-bottom: 0.1rem solid var(--linea);
+    transition: color var(--transicion), border-color var(--transicion);
+}
+
+.volver a:hover {
+    color: var(--acento);
+    border-bottom-color: var(--acento);
+}
+
+/*Pie*/
+#pie {
+    background-color: var(--marca);
+    color: var(--blanco);
+    padding: var(--esp-xl) var(--esp-md) var(--esp-md);
+    margin-top: var(--esp-xl);
+}
+.pie-contenido {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+
+    display: grid;                   /*Se aplica grid*/
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: var(--esp-md);
+    align-items: start;
+}
+
+.datos-contacto {
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.9;
+    opacity: 0.9;
+}
+.datos-contacto a {
+    color: var(--blanco);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, .4);
+    transition: border-color var(--transicion);
+}
+
+.datos-contacto a:hover {
+    border-bottom: var(--blanco);  /*Efecto hover en el correo del pie*/
+}
+
+.creditos {
+    grid-column: 1 / -1;
+    padding-top: var(--esp-sm);
+    border-top: 0.1rem solid rgba(255, 255, 255, .22);
+    text-align: center;
+    font-size: 1.3rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+}
