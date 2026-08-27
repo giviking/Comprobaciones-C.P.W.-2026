@@ -17,6 +17,24 @@ body {
     background: #fafaf8;
 }
 
+/* Variables */
+:root {
+    --marca:#1f4e79;
+    --acento: #c55a11;
+    --tinta: #333333;
+    --suave: #6b7280;
+    --fondo: #fafaf8;
+    --linea: #dddddd;
+
+    --esp-sm: 1.6rem;
+    --esp-md: 2.4rem;
+    --esp-lg: 4rem;
+
+    --radio:.6rem;
+    --sombra: 0 .4rem 1.2rem rgba(0,0,0,.1);
+
+}
+
 
 
 
