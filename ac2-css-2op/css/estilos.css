@@ -1,6 +1,10 @@
-/* Aqui se inicia el repositorio despues de arreglar y establecer bien la rama*/
-
+/* Reset */
 * {
-    asdfasdf
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
 }
