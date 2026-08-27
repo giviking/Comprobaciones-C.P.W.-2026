@@ -1,48 +1,526 @@
-/* Reset */
+                                  /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #fafaf8;
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--tinta);
+  background: var(--fondo);
 }
 
-/* Variables */
+                                  /* Variables */
 :root {
-    --marca:#1f4e79;
-    --acento: #c55a11;
-    --tinta: #333333;
-    --suave: #6b7280;
-    --fondo: #fafaf8;
-    --linea: #dddddd;
+  --marca: #1f4e79;
+  --acento: #c55a11;
+  --tinta: #333333;
+  --suave: #6b7280;
+  --fondo: #fafaf8;
+  --linea: #dddddd;
+  --blanco: #ffffff;
+  --azul-claro: #e3eef9;
 
-    --esp-sm: 1.6rem;
-    --esp-md: 2.4rem;
-    --esp-lg: 4rem;
+  --esp-sm: 1.6rem;
+  --esp-md: 2.4rem;
+  --esp-lg: 4rem;
 
-    --radio:.6rem;
-    --sombra: 0 .4rem 1.2rem rgba(0,0,0,.1);
+  --radio: 0.6rem;
+  --sombra: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+}
 
+                                  /* Tipografia y tamaños */
+h1, h2,h3 {
+  font-family: Georgia, serif;
+  line-height: 1.2;
+  color: var(--marca);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+a {
+  color: var(--acento);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--marca);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+                                  /* Cuerpo de la pagina */
+#cabecera {
+  background: var(--marca);
+  color: var(--blanco);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+                                  /* Cabecera, o el header id */
+#cabecera h1 {
+  color: var(--blanco);
+}
+
+.identidad {
+  flex: 1;
+}
+
+.frase {
+  margin: 0;
+  color: #e8f1f8;
+  font-style: italic;
+}
+
+.navegacion ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.navegacion a {
+  color: var(--blanco);
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radio);
+}
+
+.navegacion a:hover,
+.navegacion .pagina-actual {
+  background: var(--acento);
+  text-decoration: none;
+}
+
+                                  /* Contenido Principal */
+#principal {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#principal > section {
+  margin-bottom: var(--esp-lg);
+}
+
+#principal > section > h2 {
+  border-bottom: 0.2rem solid var(--acento);
+  padding-bottom: 0.8rem;
+}
+
+                                  /* Zona de Presentacion */
+#bienvenida {
+  background: linear-gradient(135deg, var(--marca), var(--acento));
+  color: var(--blanco);
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: var(--radio);
+  margin-bottom: var(--esp-lg);
+}
+
+#bienvenida h2 {
+  color: var(--blanco);
+  font-size: 3.6rem;
+}
+
+.destacado-texto {
+  max-width: 75rem;
+  margin: 0 auto 2.4rem;
+  font-size: 1.8rem;
+}
+
+.destacado-texto strong {
+  color: var(--blanco);
+}
+
+                                  /*Tres bloques para maquetar en fila*/
+#servicios {
+  margin-top: 3rem;
+}
+
+.bloques-servicio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.bloque {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  border-top: 0.4rem solid var(--acento);
+}
+
+.bloque p {
+  margin-bottom: 1rem;
+}
+
+.bloque-nota {
+  color: var(--suave);
+  font-size: 1.4rem;
+  font-style: italic;
+  border-top: 0.1rem solid var(--linea);
+  padding-top: 1rem;
+}
+
+                                  /* Contenido con cita*/
+#origen {
+  max-width: 85rem;
+}
+
+.testimonio {
+  margin: 2.4rem 0;
+  padding: 2rem 2.4rem;
+  border-left: 0.5rem solid var(--acento);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-style: italic;
 }
 
 
+.testimonio-autoria {
+  color: var(--suave);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  text-align: right;
+}
+
+                                  /* Contenido secundario */
+.recuadro-nota {
+  max-width: 116rem;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  background: #fff3e8;
+  border: 0.1rem solid #edc9ab;
+  border-left: 0.5rem solid var(--acento);
+  border-radius: var(--radio);
+}
+
+.recuadro-nota h2 {
+  color: var(--acento);
+}
+
+.recuadro-nota p {
+  margin-bottom: 0;
+}
 
 
+                                  /* Plantas plantas.html  */
 
-/* Pie de Pagina*/
-footer {
-    margin-top: 4rem;
-    text-align: center;
-    padding: 2rem;
-    background: #eee;
+                                  /*Contenido Principal*/
+
+                                  /*Indice Interno con Anclas*/
+
+
+.sumario {
+  background: var(--blanco);
+  padding: 2rem;
+  margin-bottom: 4rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.sumario h2 {
+  font-size: 2.4rem;
+}
+
+.sumario ul {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.sumario a {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background: #f5f7fa;
+  border-radius: var(--radio);
+}
+
+.sumario a:hover {
+  background: var(--azul-claro);
+  text-decoration: none;
+}
+
+                                  /* La tabla */
+.tabla-especies {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+}
+
+caption {
+  padding: 1rem;
+  text-align: left;
+  color: var(--suave);
+  caption-side: top;
+}
+
+th,
+td {
+  padding: 1.2rem;
+  border-bottom: 0.1rem solid var(--linea);
+  text-align: left;
+}
+
+thead th {
+  background: var(--marca);
+  color: var(--blanco);
+}
+
+tbody tr:nth-child(even) {
+  background: #f5f7fa;
+}
+
+tbody tr:hover {
+  background: var(--azul-claro);
+}
+
+tbody th {
+  color: var(--marca);
+}
+
+tfoot td {
+  color: var(--suave);
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+                                  /* Listas */
+.lista-grupos {
+  margin: 2rem 0 3rem;
+  padding-left: 2.5rem;
+}
+
+.lista-grupos > li {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: var(--marca);
+}
+
+.lista-grupos ul {
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.lista-grupos ul li {
+  font-weight: 400;
+  color: var(--tinta);
+}
+
+.terminos {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.35fr) 1fr;
+  gap: 1rem 2rem;
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.terminos dt {
+  font-weight: 700;
+  color: var(--marca);
+}
+
+.terminos dd {
+  margin: 0;
+}
+
+                                  /* El Formulario */
+.formulario-encargo {
+  max-width: 85rem;
+}
+
+fieldset {
+  border: 0.1rem solid var(--linea);
+  border-radius: var(--radio);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+}
+
+legend {
+  padding: 0 0.8rem;
+  font-weight: 700;
+  color: var(--marca);
+  font-size: 1.8rem;
+}
+
+.linea-campo {
+  margin-bottom: 1.6rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 1rem 1.4rem;
+  border: 0.1rem solid var(--linea);
+  border-radius: var(--radio);
+  font-size: 1.6rem;
+  font-family: inherit;
+  background: var(--blanco);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--acento);
+  box-shadow: 0 0 0 0.3rem rgba(197, 90, 17, 0.18);
+}
+
+.seccion-opciones {
+  margin: 2rem 0;
+  background: #f5f7fa;
+  box-shadow: none;
+}
+
+.opcion-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.opcion-radio input {
+  accent-color: var(--acento);
+}
+
+.opcion-radio label {
+  display: inline;
+  margin: 0;
+  font-weight: 400;
+}
+
+.fila-acciones {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+                                  /* Boton */
+.accion {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: var(--radio);
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.accion:hover {
+  transform: translateY(-0.2rem);
+  text-decoration: none;
+}
+
+.accion:active {
+  transform: translateY(0);
+}
+
+.accion-primaria {
+  background: var(--acento);
+  color: var(--blanco);
+}
+
+.accion-primaria:hover {
+  background: #a8490e;
+}
+
+.accion-secundaria {
+  background: var(--suave);
+  color: var(--blanco);
+}
+
+.accion-secundaria:hover {
+  background: #4b5563;
+}
+
+.regresar {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+/* Pie de página*/
+#pie {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #eeeeee;
+  text-align: center;
+}
+
+.contenido-pie {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.direccion {
+  font-style: normal;
+  color: var(--suave);
+}
+
+.derechos {
+  margin: 1.6rem 0 0;
+  color: var(--suave);
 }
