@@ -1,12 +1,10 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   CASA TOMILLO · HOJA DE ESTILOS (enfoque mobile-first)
+   CASA TOMILLO · HOJA DE ESTILOS
    Escuela de cocina · San José, Costa Rica
 
-   Puntos de quiebre (medidos según este contenido, no por dispositivo):
-   · Base: pantallas estrechas (hasta 47.99em / ~767px)
-   · 48em (~768px): el menú cabe en horizontal y las tarjetas van de a dos
-   · 64em (~1024px): caben tres tarjetas, cuatro piezas de galería y
-     las dos columnas de contenido sin apretar
+   Esta hoja produce un sitio que se ve correctamente en un monitor de
+   escritorio. Fue escrita antes de que el proyecto contemplara el uso
+   desde teléfonos.
    ═══════════════════════════════════════════════════════════════════════ */
 
 
@@ -131,7 +129,7 @@ img {
 .subtitulo       { margin-top: 1.5rem; margin-bottom: 0.625rem; }
 
 
-/* ─── CABECERA Y MENÚ (columna en pantalla estrecha) ───────────────── */
+/* ─── CABECERA ───────────────────────────────────────────────────────── */
 .cabecera {
   display: flex;
   flex-direction: column;
@@ -234,7 +232,7 @@ img {
 }
 
 
-/* ─── TARJETAS · patrón columna → fila ──────────────────────────────── */
+/* ─── TARJETAS · Flexbox ─────────────────────────────────────────────── */
 .fila-propuestas {
   display: flex;
   flex-direction: column;
@@ -267,7 +265,7 @@ img {
 }
 
 
-/* ─── GALERÍA · patrón de revelado de columnas ──────────────────────────── */
+/* ─── GALERÍA · Grid ─────────────────────────────────────────────────── */
 .rejilla-galeria {
   display: grid;
   grid-template-columns: 1fr;
@@ -404,7 +402,7 @@ img {
 }
 
 
-/* ─── DOS COLUMNAS · patrón columna → fila ────────────────────────────── */
+/* ─── DOS COLUMNAS · Flexbox ─────────────────────────────────────────── */
 .dos-columnas {
   display: flex;
   flex-direction: column;
@@ -656,11 +654,8 @@ textarea.campo-entrada {
 }
 
 
-/* ═══════════════════════════════════════════════════════════════════════
-   PUNTO DE QUIEBRE 1 · desde 48em (~768px)
-   Tramo: tableta. El menú deja de competir con la marca; tarjetas e
-   índice pasan a disposición horizontal; galería a dos columnas.
-   ═══════════════════════════════════════════════════════════════════════ */
+/* Primer punto de quiebre*/
+
 @media (min-width: 48em) {
   h1 { font-size: 2.25rem; }
   h2 { font-size: 1.85rem; }
@@ -729,11 +724,8 @@ textarea.campo-entrada {
 }
 
 
-/* ═══════════════════════════════════════════════════════════════════════
-   PUNTO DE QUIEBRE 2 · desde 64em (~1024px)
-   Tramo: escritorio. Tres tarjetas, galería de cuatro, pie de tres
-   columnas y bloques de dos columnas lado a lado.
-   ═══════════════════════════════════════════════════════════════════════ */
+/* Segundo punto de quiebra*/
+
 @media (min-width: 64em) {
   h1 { font-size: 3.25rem; }
   h2 { font-size: 2.125rem; }
@@ -782,11 +774,7 @@ textarea.campo-entrada {
 }
 
 
-/* ═══════════════════════════════════════════════════════════════════════
-   CARACTERÍSTICA DE MEDIO DISTINTA DEL ANCHO
-   hover: el realce de tarjetas y galería solo si hay puntero fino.
-   prefers-reduced-motion: se anulan desplazamientos y transformaciones.
-   ═══════════════════════════════════════════════════════════════════════ */
+/* Distinto al ancho */
 @media (hover: hover) and (pointer: fine) {
   .tarjeta:hover {
     transform: translateY(-0.3125rem);
@@ -824,9 +812,7 @@ textarea.campo-entrada {
 }
 
 
-/* ═══════════════════════════════════════════════════════════════════════
-   IMPRESIÓN · versión razonable: sin navegación ni botones
-   ═══════════════════════════════════════════════════════════════════════ */
+/* Impresora */
 @media print {
   html,
   body {
