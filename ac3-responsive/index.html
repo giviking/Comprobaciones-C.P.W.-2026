@@ -152,8 +152,13 @@
         </figure>
 
         <figure class="pieza">
-          <img src="recursos/taller-4.jpg" alt="Detalle de una tarta decorada con frutas"
+          <picture>
+            <source media="(min-width: 1024)" srcset="recursos/taller-4-grande.jpg">
+            <source media="(min-width: 768)" srcset="recursos/taller-4-mediana.jpg">
+            <source media="(min-width: 468)" srcset="recursos/taller-4-pequena.jpg">
+          <img src="recursos/taller-4-pequena.jpg" alt="Detalle de una tarta decorada con frutas"
                width="1200" height="800">
+          </picture>
           <figcaption class="pieza-pie">Cierre de repostería</figcaption>
         </figure>
 
