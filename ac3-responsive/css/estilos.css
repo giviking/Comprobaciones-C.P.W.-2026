@@ -42,8 +42,8 @@
 
 /* ─── BASE ───────────────────────────────────────────────────────────── */
 html {
-  font-size: 100%;
-  overflow-x: hidden;
+  font-size: 100%;  
+  scroll-behavior: smooth;
 }
 
 body {
