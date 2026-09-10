@@ -141,8 +141,13 @@
         </figure>
 
         <figure class="pieza">
-          <img src="recursos/taller-3.jpg" alt="Grupo de participantes cocinando en la mesa central"
+          <picture>
+            <source media="(min-width: 1024)" srcset="recursos/taller-3-grande.jpg">
+            <source media="(min-width: 768)" srcset="recursos/taller-3-mediana.jpg">
+            <source media="(min-width: 468)" srcset="recursos/taller-3-pequena.jpg">
+          <img src="recursos/taller-3-pequena.jpg" alt="Grupo de participantes cocinando en la mesa central"
                width="1200" height="800">
+          </picture>
           <figcaption class="pieza-pie">Grupo de la tarde</figcaption>
         </figure>
 
